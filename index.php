@@ -21,7 +21,8 @@
     if(array_key_exists("PATH_INFO", $_SERVER)){
         $path = $_SERVER["PATH_INFO"];
     }
-    
+
+//    echo $path;
     $path = substr($path, 1, strlen($path));
     $path = explode("/", $path);
 
@@ -34,6 +35,7 @@
 
     $realPath = "views/".$directoryName."/".$filename.".html";
 
+//    echo $realPath;
     //判断如果用户请求的文件存在
     if(file_exists($realPath)){
         //通过php代码，找到用户要请求的文件，给用户返回即可
