@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../static/less/index.css">
 </head>
 <body>
+    
     <!-- 侧边栏 -->
     <div class="aside">
         <!-- 个人资料 -->
@@ -29,7 +30,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../user/user_list.html">
+                    <a href="list.html" class="active">
                         <i class="fa fa-bell"></i>
                         用户管理
                     </a>
@@ -46,14 +47,14 @@
                         课程管理
                         <i class="arrow fa fa-angle-right"></i>
                     </a>
-                    <ul class="list-unstyled" style="display: block;">
+                    <ul class="list-unstyled">
                         <li>
-                            <a href="course_add.html">
+                            <a href="../course/add.html">
                                  课程添加
                             </a>
                         </li>
                         <li>
-                            <a href="./course_list.html" class="active">
+                            <a href="../course/list.html">
                                 课程列表
                             </a>
                         </li>
@@ -63,14 +64,14 @@
                             </a>
                         </li>
                         <li>
-                            <a href="course_topic.html">
+                            <a href="../course/topic.html">
                                 课程专题
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="../advert/advert_list.html">
+                    <a href="../advert/list.html">
                         <i class="fa fa-bell"></i>
                         广告管理
                     </a>
@@ -135,168 +136,124 @@
                     </ul>
                 </nav>          
             </div>
-            <!-- 客户列表 -->
-            <div class="body course-list">
+            <!-- 客户信息 -->
+            <div class="body user-profile">
                 <!-- 面包屑 -->
                 <ol class="breadcrumb">
-                    <li><a href="javascript:;">课程管理</a></li>
-                    <li class="active">课程列表</li>
+                    <li><a href="javascript:;">用户管理</a></li>
+                    <li class="active">用户信息</li>
                 </ol>
-                <div class="courses">
-                    <!-- 搜索 -->
-                    <div class="search">
-                        <form action="" class="form-inline">
-                            <select name="" class="form-control input-sm">
-                                <option value="">按年龄</option>
-                            </select>
-                            <select name="" class="form-control input-sm">
-                                <option value="">按性别</option>
-                            </select>
-                            <select name="" class="form-control input-sm">
-                                <option value="">按地区</option>
-                            </select>
-                            <select name="" class="form-control input-sm">
-                                <option value="">按日期</option>
-                            </select>
-                            <button class="btn btn-success btn-sm">筛选</button>
-                            <div class="input-group pull-right">
-                                <input type="text" class="form-control input-sm">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-success btn-sm">搜索</button>
-                                </span>
-                            </div>
-                        </form>
+                <div class="profile">
+                    <div class="pull-left">
+                        <img src="../static/uploads/default.jpg" class="img-circle pull-left" alt="">
+                        <span class="name">令狐冲</span>
+                        <span>一见尼姑，逢赌必输！</span>
                     </div>
+                    <ul class="pull-right list-inline">
+                        <li>
+                            <span>积分</span>
+                            <a href="javascript:;">20</a>
+                        </li>
+                        <li>
+                            <span>等级</span>
+                            <a href="javascript:;">1</a>
+                        </li>
+                        <li>
+                            <span>金币</span>
+                            <a href="javascript:;">10</a>
+                        </li>
+                    </ul>                   
+                </div>
+                <div class="courses">
+                    <ul class="navs list-unstyled">
+                        <li>
+                            <a href="javascript:;" class="active">全部</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">在学</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">完成</a>
+                        </li>
+                    </ul>
                     <div class="course">
                         <div class="pic">
                             <img src="../static/uploads/course_1.jpg" alt="">
+                            <span class="percent">100%</span>
                         </div>
                         <div class="info">
                             <a href="javascript:;">html,div+css视频教程(2014最新,带多个企业级项目实战)</a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <span>讲师：李鹏周</span>
-                                    <span>类别：前端开发</span>
-                                </li>
-                                <li>
-                                    <span>课时：32</span>
-                                    <span>学员：9823</span>
-                                </li>
-                                <li>
-                                    <span>浏览：11313</span>
-                                    <span></span>
-                                </li>
-                            </ul>
+                            <p>2016-10-26学习至 <span>L1 第一章 学前准备</span></p>   
                         </div>
                     </div>
                     <div class="course">
                         <div class="pic">
                             <img src="../static/uploads/course_2.jpg" alt="">
+                            <span class="percent">100%</span>
                         </div>
                         <div class="info">
                             <a href="javascript:;">JavaScript 基础</a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <span>讲师：李鹏周</span>
-                                    <span>类别：前端开发</span>
-                                </li>
-                                <li>
-                                    <span>课时：32</span>
-                                    <span>学员：9823</span>
-                                </li>
-                                <li>
-                                    <span>浏览：11313</span>
-                                    <span></span>
-                                </li>
-                            </ul>
+                            <p>2016-10-27学习至 <span>L1 张孝祥－JavaScript01-01</span></p>    
                         </div>
                     </div>
                     <div class="course">
                         <div class="pic">
                             <img src="../static/uploads/course_3.jpg" alt="">
+                            <span class="percent">100%</span>
                         </div>
                         <div class="info">
                             <a href="javascript:;">App开发从0到1</a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <span>讲师：李鹏周</span>
-                                    <span>类别：前端开发</span>
-                                </li>
-                                <li>
-                                    <span>课时：32</span>
-                                    <span>学员：9823</span>
-                                </li>
-                                <li>
-                                    <span>浏览：11313</span>
-                                    <span></span>
-                                </li>
-                            </ul>
+                            <p>2016-10-27学习至 <span>L1 第一节   欢迎来到APICloud的世界（一）</span></p>   
                         </div>
                     </div>
                     <div class="course">
                         <div class="pic">
                             <img src="../static/uploads/course_4.jpg" alt="">
+                            <span class="percent">100%</span>
                         </div>
                         <div class="info">
                             <a href="javascript:;">Java 从入门到精通</a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <span>讲师：李鹏周</span>
-                                    <span>类别：前端开发</span>
-                                </li>
-                                <li>
-                                    <span>课时：32</span>
-                                    <span>学员：9823</span>
-                                </li>
-                                <li>
-                                    <span>浏览：11313</span>
-                                    <span></span>
-                                </li>
-                            </ul>
+                            <p>2016-10-27学习至 <span>L1 hello world</span></p>    
                         </div>
                     </div>
                     <div class="course">
                         <div class="pic">
                             <img src="../static/uploads/course_1.jpg" alt="">
+                            <span class="percent">100%</span>
                         </div>
                         <div class="info">
                             <a href="javascript:;">html,div+css视频教程(2014最新,带多个企业级项目实战)</a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <span>讲师：李鹏周</span>
-                                    <span>类别：前端开发</span>
-                                </li>
-                                <li>
-                                    <span>课时：32</span>
-                                    <span>学员：9823</span>
-                                </li>
-                                <li>
-                                    <span>浏览：11313</span>
-                                    <span></span>
-                                </li>
-                            </ul>
+                            <p>2016-10-26学习至 <span>L1 第一章 学前准备</span></p>   
+                        </div>
+                    </div>
+                    <div class="course">
+                        <div class="pic">
+                            <img src="../static/uploads/course_2.jpg" alt="">
+                            <span class="percent">100%</span>
+                        </div>
+                        <div class="info">
+                            <a href="javascript:;">JavaScript 基础</a>
+                            <p>2016-10-27学习至 <span>L1 张孝祥－JavaScript01-01</span></p>    
                         </div>
                     </div>
                     <div class="course">
                         <div class="pic">
                             <img src="../static/uploads/course_3.jpg" alt="">
+                            <span class="percent">100%</span>
                         </div>
                         <div class="info">
                             <a href="javascript:;">App开发从0到1</a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <span>讲师：李鹏周</span>
-                                    <span>类别：前端开发</span>
-                                </li>
-                                <li>
-                                    <span>课时：32</span>
-                                    <span>学员：9823</span>
-                                </li>
-                                <li>
-                                    <span>浏览：11313</span>
-                                    <span></span>
-                                </li>
-                            </ul>
+                            <p>2016-10-27学习至 <span>L1 第一节   欢迎来到APICloud的世界（一）</span></p>   
+                        </div>
+                    </div>
+                    <div class="course">
+                        <div class="pic">
+                            <img src="../static/uploads/course_4.jpg" alt="">
+                            <span class="percent">100%</span>
+                        </div>
+                        <div class="info">
+                            <a href="javascript:;">Java 从入门到精通</a>
+                            <p>2016-10-27学习至 <span>L1 hello world</span></p>    
                         </div>
                     </div>
                 </div>
@@ -317,6 +274,6 @@
     <script src="../assets/jquery/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../assets/nprogress/nprogress.js"></script>
-    <script src="../static/js/lib/common.js"></script>
+    <script src="../static/js/common.js"></script>
 </body>
 </html>
