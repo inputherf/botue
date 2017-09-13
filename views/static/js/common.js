@@ -33,5 +33,33 @@ define(["jquery", "template", "cookie"], function ($, template) {
                 }
             })
         })
+    //    侧边栏下拉菜单
+        $(".navs>ul>li>ul").parent().click(function () {
+        //    让子菜单显示出来
+            $(this).children("ul").stop().slideToggle();
+        })
+    //    让当前链接的菜单项高亮
+    //    console.log($(".navs a"))
+        $(".navs a").each(function (i, e){
+            //寻找导航中和当前地址栏中路径相同的a标签
+            if($(e).attr("href")==location.pathname){
+                 // alert(ele.href);
+                 //让当前a标签的父元素，加上一个active类样式
+                $(e).addClass("active");
+             }
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
     })
 })
