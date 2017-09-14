@@ -8,11 +8,21 @@ require.config({
         template:"./artTemplate/template",
         bootstrap:"./bootstrap/js/bootstrap",
         utils:"../static/js/lib/utils",
-        form:"./jquery-form/jquery.form"
+        form:"./jquery-form/jquery.form",
+        nprogress:"./nprogress/nprogress",
+        datepicker:"./bootstrap-datepicker/js/bootstrap-datepicker",
+        datepickerCN:"./bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min",
+        validate:"./jquery-validate/jquery-validate"
     },
     shim:{
         bootstrap:{
             //由于bootstrap不支持模块化，又需要依赖于jquery
+            deps:["jquery"]
+        },
+        datepickerCN:{
+            deps:["jquery"]
+        },
+        validate:{
             deps:["jquery"]
         }
     }

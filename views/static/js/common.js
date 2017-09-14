@@ -6,8 +6,10 @@
 // 	$(this).next().slideToggle();
 // });
 
-define(["jquery", "template", "cookie"], function ($, template) {
+define(["jquery", "template", "nprogress","cookie"], function ($, template,NProgress) {
+    NProgress.start();
     $(function () {
+        NProgress.done();
         if (location.pathname != "/dashboard/login") {
             if (!$.cookie("PHPSESSID")) {
                 location.href = "/dashboard/login";
@@ -49,8 +51,13 @@ define(["jquery", "template", "cookie"], function ($, template) {
              }
         })
 
-
-
+    //    进度条
+        $(document).ajaxStart(function () {
+                NProgress.start();
+        });
+        $(document).ajaxStop(function () {
+            NProgress.done();
+        })
 
 
 
