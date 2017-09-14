@@ -8,93 +8,7 @@
 <body>
     
     <!-- 侧边栏 -->
-    <div class="aside">
-        <!-- 个人资料 -->
-        <div class="profile">
-            <!-- 头像 -->
-            <div class="avatar img-circle">
-                <img src="/views/static/uploads/avatar.jpg">
-            </div>
-            <h4>布头儿</h4>
-        </div>
-        <!-- 导航菜单 -->
-        <div class="navs">
-            <ul class="list-unstyled">
-                <li>
-                    <a href="/views/dashboard/index.html" class="active">
-                        <i class="fa fa-home"></i>
-                        仪表盘
-                    </a>
-                </li>
-                <li>
-                    <a href="/views/user/list.html">
-                        <i class="fa fa-bell"></i>
-                        用户管理
-                    </a>
-                </li>
-                <li>
-                    <a href="/views/teacher/list.html">
-                        <i class="fa fa-bell"></i>
-                        讲师管理
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <i class="fa fa-cog"></i>
-                        课程管理
-                        <i class="arrow fa fa-angle-right"></i>
-                    </a>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="/views/course/add.html">
-                                 课程添加
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/views/course/list.html">
-                                课程列表
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/views/category/list.html">
-                                课程分类
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/views/course/topic.html">
-                                课程专题
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/views/advert/list.html">
-                        <i class="fa fa-bell"></i>
-                        广告管理
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <i class="fa fa-cog"></i>
-                        系统设置
-                        <i class="arrow fa fa-angle-right"></i>
-                    </a>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="javascript:;">
-                                网站设置
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                 权限管理
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <?php include "/views/public/aside.html" ?>
     <!-- 主体 -->
     <div class="main">
         <div class="container-fluid">
@@ -121,10 +35,11 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="" class="col-xs-3 control-label">昵称</label>
+                            <label for="" class="col-xs-3 control-label"  >昵称</label>
                             <div class="col-xs-5">
-                                <input type="text" class="form-control input-sm">
+                                <input type="text" class="form-control input-sm" data-describedby="msgforname" data-description="name" data-required>
                             </div>
+                            <span id="msgforname" class="col-xs-3 help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">性别</label>
@@ -140,8 +55,9 @@
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">出生日期</label>
                             <div class="col-xs-5">
-                                <input type="text" class="form-control input-sm">
+                                <input type="text" data-required data-describedby="msgforbirth" data-description="birthday" class="form-control input-sm" id="birth">
                             </div>
+                            <span  id="msgforbirth" class="col-xs-3 help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">籍贯</label>
@@ -164,32 +80,35 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="" class="col-xs-3 control-label">手机号码</label>
+                            <label for="" data-describedby="msgforcell" data-description="cell" data-pattern="/^1[34578]\d{9}$/" class="col-xs-3 control-label">手机号码</label>
                             <div class="col-xs-5">
                                 <input type="text" class="form-control input-sm">
                             </div>
+                            <span  id="msgforcell" class="col-xs-3 help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">电子邮箱</label>
                             <div class="col-xs-5">
-                                <input type="text" class="form-control input-sm">
+                                <input type="text" class="form-control input-sm" data-describedby="msgformail" data-description="mail" data-pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$">
                             </div>
+                            <span  id="msgformail" class="col-xs-3 help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">入职日期</label>
                             <div class="col-xs-5">
-                                <input type="text" class="form-control input-sm">
+                                <input type="text" class="form-control input-sm" data-required data-describedby="msgfordata"   data-description="data" id="data">
                             </div>
+                            <span  id="msgfordata" class="col-xs-3 help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">个人介绍</label>
                             <div class="col-xs-5 ckeditor">
-                                <textarea name="" rows="15" class="form-control input-sm"></textarea>
+                                <textarea name="introduce" rows="15" class="form-control input-sm"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-8">
-                                <a href="/views/course/course_add_step2.html" class="btn btn-success btn-sm pull-right">保 存</a>
+                                <a href="/course/course_add_step2" class="btn btn-success btn-sm pull-right">保 存</a>
                                 <a href="repass.html" class="btn btn-link btn-sm pull-right">更改密码？</a>
                             </div>
                         </div>
@@ -199,7 +118,9 @@
         </div>
     </div>
 
-    <?php include "/view/public/js.html" ?>
-    <!--<script src="../js/common.js"></script>-->
+    <?php include "/views/public/js.html" ?>
+    <script>
+        require(["../static/js/dashboard/settings"])
+    </script>
 </body>
 </html>

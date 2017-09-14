@@ -55,6 +55,7 @@ define(["jquery","template","utils","datepicker","datepickerCN","validate","form
         $("form").validate({
             sendForm:false,
             onBlur:true,
+            onChange:true,
             description:{
                 name:{
                     required:"请输入名字",
@@ -73,7 +74,6 @@ define(["jquery","template","utils","datepicker","datepickerCN","validate","form
             eachInvalidField:function () {
                 this.parent().parent().addClass("has-error").removeClass("has-success");
             }
-
         })
     }
 
